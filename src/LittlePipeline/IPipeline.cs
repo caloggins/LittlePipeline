@@ -1,4 +1,4 @@
-﻿namespace TaskProcessor
+﻿namespace LittlePipeline
 {
     public interface IPipeline<TSubject>
         where TSubject : class

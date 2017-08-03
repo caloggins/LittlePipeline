@@ -1,8 +1,8 @@
 ﻿using FakeItEasy;
+using LittlePipeline.Tests.Bits;
 using NUnit.Framework;
-using TaskProcessor.Tests.Bits;
 
-namespace TaskProcessor.Tests.Examples
+namespace LittlePipeline.Tests.Examples
 {
     public class PipelineTestExample
     {

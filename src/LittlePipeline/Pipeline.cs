@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace TaskProcessor
+namespace LittlePipeline
 {
     public class Pipeline<TSubject> : IPipeline<TSubject>
         where TSubject : class

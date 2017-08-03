@@ -7,8 +7,8 @@
     <ProjectGuid>{E1C99B09-1D41-49AF-92D1-DDB0D09AF0B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaskProcessor</RootNamespace>
-    <AssemblyName>TaskProcessor</AssemblyName>
+    <RootNamespace>LittlePipeline</RootNamespace>
+    <AssemblyName>LittlePipeline</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

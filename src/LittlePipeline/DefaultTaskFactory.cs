@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Diagnostics;
 
-namespace TaskProcessor
+namespace LittlePipeline
 {
     public class DefaultTaskFactory : ITaskFactory
     {

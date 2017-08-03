@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace TaskProcessor
+namespace LittlePipeline
 {
     [Serializable]
-    public class TaskAlreadyRegisteredException : Exception
+    public class MissingRegistrationException : Exception
     {
         //
         // For guidelines regarding the creation of new exception types, see
@@ -13,19 +13,19 @@ namespace TaskProcessor
         //    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp07192001.asp
         //
 
-        public TaskAlreadyRegisteredException()
+        public MissingRegistrationException()
         {
         }
 
-        public TaskAlreadyRegisteredException(string message) : base(message)
+        public MissingRegistrationException(string message) : base(message)
         {
         }
 
-        public TaskAlreadyRegisteredException(string message, Exception inner) : base(message, inner)
+        public MissingRegistrationException(string message, Exception inner) : base(message, inner)
         {
         }
 
-        protected TaskAlreadyRegisteredException(
+        protected MissingRegistrationException(
             SerializationInfo info,
             StreamingContext context) : base(info, context)
         {

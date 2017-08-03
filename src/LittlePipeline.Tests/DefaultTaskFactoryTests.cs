@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
+using LittlePipeline.Tests.Bits;
 using NUnit.Framework;
-using TaskProcessor.Tests.Bits;
 
-namespace TaskProcessor.Tests
+namespace LittlePipeline.Tests
 {
     public class DefaultTaskFactoryTests
     {

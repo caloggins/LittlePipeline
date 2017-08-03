@@ -1,10 +1,10 @@
 ﻿using FluentAssertions;
+using LittlePipeline.Tests.Bits;
 using Ninject;
 using Ninject.Extensions.Factory;
 using NUnit.Framework;
-using TaskProcessor.Tests.Bits;
 
-namespace TaskProcessor.Tests.Examples
+namespace LittlePipeline.Tests.Examples
 {
     public class NinjectExample
     {

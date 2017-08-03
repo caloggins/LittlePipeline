@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TaskProcessor.Tests.Bits
+namespace LittlePipeline.Tests.Bits
 {
     public class SuperTask : ITask<FirstTestSubject>
     {
