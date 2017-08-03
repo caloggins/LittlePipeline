@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace TaskProcessor
 {
-    public class Pipeline<TSubject>
+    public class Pipeline<TSubject> : IPipeline<TSubject>
         where TSubject : class
     {
         private readonly ITaskFactory factory;
@@ -22,7 +22,7 @@ namespace TaskProcessor
 
         [DebuggerStepThrough]
         public void Do<TTask>()
-            where TTask : ITask<TSubject>, new()
+            where TTask : ITask<TSubject>
         {
             CheckForSubject();
 

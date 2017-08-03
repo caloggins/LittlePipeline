@@ -44,6 +44,7 @@
       <Link>Properties\Version.cs</Link>
     </Compile>
     <Compile Include="DefaultTaskFactory.cs" />
+    <Compile Include="IPipeline.cs" />
     <Compile Include="ITask.cs" />
     <Compile Include="ITaskFactory.cs" />
     <Compile Include="MissingRegistrationException.cs" />
