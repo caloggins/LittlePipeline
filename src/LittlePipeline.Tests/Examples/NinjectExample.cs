@@ -13,8 +13,10 @@ namespace LittlePipeline.Tests.Examples
         {
             var kernel = new StandardKernel();
             kernel.Bind<ITaskFactory>().ToFactory();
+
             kernel.Bind<Increment>().ToSelf();
             kernel.Bind<Square>().ToSelf();
+
             kernel.Bind(typeof(IPipeline<>)).To(typeof(Pipeline<>));
 
             var pipeline = kernel.Get<IPipeline<FirstTestSubject>>();
@@ -27,6 +29,5 @@ namespace LittlePipeline.Tests.Examples
 
             subject.Value.Should().Be(4);
         }
-
     }
 }
