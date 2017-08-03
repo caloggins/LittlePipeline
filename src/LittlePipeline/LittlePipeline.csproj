@@ -43,6 +43,8 @@
     <Compile Include="..\Version.cs">
       <Link>Properties\Version.cs</Link>
     </Compile>
+    <Compile Include="Builder.cs" />
+    <Compile Include="MakePipeline.cs" />
     <Compile Include="DefaultTaskFactory.cs" />
     <Compile Include="IPipeline.cs" />
     <Compile Include="ITask.cs" />
