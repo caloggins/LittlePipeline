@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>LittlePipeline</id>
+        <version>0.1.0</version>
+        <authors>CLoggins</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A little library to give pipeline support.</description>
+        <releaseNotes>Initial release.</releaseNotes>
+        <copyright>2017 by Christopher Loggins</copyright>
+    </metadata>
+    <files>
+        <file src="src\LittlePipeline.Net452\bin\Release\LittlePipeline.Net452.dll" target="content\net452\LittlePipeline.Net452.dll" />
+        <file src="src\LittlePipeline.Net452\bin\Release\LittlePipeline.Net452.pdb" target="content\net452\LittlePipeline.Net452.pdb" />
+        <file src="src\LittlePipeline\bin\Release\LittlePipeline.dll" target="content\net462\LittlePipeline.dll" />
+        <file src="src\LittlePipeline\bin\Release\LittlePipeline.pdb" target="content\net462\LittlePipeline.pdb" />
+    </files>
+</package>
