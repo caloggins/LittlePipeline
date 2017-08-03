@@ -4,7 +4,7 @@ using Ninject.Extensions.Factory;
 using NUnit.Framework;
 using TaskProcessor.Tests.Bits;
 
-namespace TaskProcessor.Tests
+namespace TaskProcessor.Tests.Examples
 {
     public class NinjectExample
     {
