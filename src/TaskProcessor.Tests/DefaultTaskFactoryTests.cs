@@ -19,7 +19,7 @@ namespace TaskProcessor.Tests
         [Test]
         public void ItReturnsRegisteredTasks()
         {
-            var superTask = factory.Create<SuperTask, FirstTestSubject>();
+            var superTask = factory.Create<SuperTask>();
 
             superTask.Should().NotBeNull();
         }
@@ -27,7 +27,7 @@ namespace TaskProcessor.Tests
         [Test]
         public void ItThrowsExceptionsWhenTheTaskIsMissing()
         {
-            Action act = () => { factory.Create<Increment, FirstTestSubject>(); };
+            Action act = () => { factory.Create<Increment>(); };
 
             act.ShouldThrow<MissingRegistrationException>()
                 .WithMessage("No registration for the Increment task was found.");

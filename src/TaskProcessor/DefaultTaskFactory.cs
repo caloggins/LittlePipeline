@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Diagnostics;
 
 namespace TaskProcessor
 {
@@ -7,9 +8,9 @@ namespace TaskProcessor
     {
         private readonly ConcurrentDictionary<Type, Func<object>> creators = new ConcurrentDictionary<Type, Func<object>>();
 
-        public TTask Create<TTask, TSubject>()
-            where TTask : ITask<TSubject>
-            where TSubject : class
+        [DebuggerStepThrough]
+        public TTask Create<TTask>()
+            where TTask : ITask
         {
             creators.TryGetValue(typeof(TTask), out Func<object> creator);
 
@@ -19,6 +20,7 @@ namespace TaskProcessor
             return (TTask) creator();
         }
 
+        [DebuggerStepThrough]
         public void Register<TTask>(Func<object> creator)
         {
             if(creators.ContainsKey(typeof(TTask)))

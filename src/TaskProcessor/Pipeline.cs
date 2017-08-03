@@ -26,7 +26,7 @@ namespace TaskProcessor
         {
             CheckForSubject();
 
-            var task = factory.Create<TTask, TSubject>();
+            var task = factory.Create<TTask>();
             task.Run(subject);
         }
 

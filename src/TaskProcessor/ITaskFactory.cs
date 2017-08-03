@@ -2,8 +2,7 @@
 {
     public interface ITaskFactory
     {
-        TTask Create<TTask, TSubject>()
-            where TTask : ITask<TSubject>
-            where TSubject : class;
+        TTask Create<TTask>()
+            where TTask : ITask;
     }
 }
