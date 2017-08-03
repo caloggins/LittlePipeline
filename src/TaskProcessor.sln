@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProcessor", "TaskProcessor\TaskProcessor.csproj", "{E1C99B09-1D41-49AF-92D1-DDB0D09AF0B6}"
 EndProject
@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProcessor.Tests", "Task
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3879B439-61F5-4699-B04F-98A29CA47AC7}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		ReadMe.md = ReadMe.md
 		Version.cs = Version.cs
 	EndProjectSection
