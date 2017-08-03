@@ -56,6 +56,8 @@
     <Compile Include="..\Version.cs">
       <Link>Properties\Version.cs</Link>
     </Compile>
+    <Compile Include="Bits\SuperTask.cs" />
+    <Compile Include="DefaultTaskFactoryTests.cs" />
     <Compile Include="PipelineTests.cs" />
     <Compile Include="Bits\FirstTestSubject.cs" />
     <Compile Include="Bits\Increment.cs" />
