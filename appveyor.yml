@@ -23,5 +23,4 @@ configuration: Release
 
 build:
   project: src\LittlePipeline.sln
-
-verbosity: normal
+  verbosity: normal
