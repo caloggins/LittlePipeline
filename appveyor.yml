@@ -28,3 +28,9 @@ build:
   project: src\LittlePipeline.sln
   publish_nuget: true
   verbosity: normal
+
+after_build:
+  - nuget pack src\LittlePipeline.nuspec
+
+artifacts:
+  - path: '**\*.nupkg'
