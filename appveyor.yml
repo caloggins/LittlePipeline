@@ -26,4 +26,5 @@ before_build:
 
 build:
   project: src\LittlePipeline.sln
+  publish_nuget: true
   verbosity: normal
