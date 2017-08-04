@@ -68,6 +68,7 @@
       <Link>Properties\Version.cs</Link>
     </Compile>
     <Compile Include="DefaultTaskFactory.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
