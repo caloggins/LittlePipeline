@@ -30,7 +30,7 @@ build:
   verbosity: normal
 
 after_build:
-  - nuget pack artifacts\LittlePipeline.nuspec -Version "{version}"
+  - nuget pack artifacts\LittlePipeline.nuspec -Version %APPVEYOR_BUILD_VERSION%
 
 artifacts:
   - path: 'artifacts\*.nupkg'
