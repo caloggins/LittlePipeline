@@ -1,5 +1,8 @@
 # LittlePipeline
 
+[![Build status](https://ci.appveyor.com/api/projects/status/github/cloggins/littlepipeline?svg=true)](https://ci.appveyor.com/project/caloggins/littlepipeline/branch/master)
+[![NuGet](http://img.shields.io/nuget/v/LittlePipeline.svg)](https://www.nuget.org/packages/LittlePipeline/)
+
 ### What is it?
 
 A pipeline, process, or whatever is a sequence of actions that need to be performed to complete an operation. LittlePipeline is a small example of how to create a pipeline that can be tested, and used with any common IoC container. This is a very basic example. It is not designed to handle concurrent tasks. The idea is to use it to express a sequence of steps that must happen to complete a process.
