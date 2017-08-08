@@ -16,7 +16,7 @@
         </dependencies>
     </metadata>
     <files>
-        <file src=".\bin\Release\*.*" target="lib\net452" />
-        <file src=".\bin\Release\*.*" target="lib\net462" />
+        <file src="..\src\LittlePipeline\bin\Release\*.*" target="lib\net452" />
+        <file src="..\src\LittlePipelineNet452\bin\Release\*.*" target="lib\net462" />
     </files>
 </package>
