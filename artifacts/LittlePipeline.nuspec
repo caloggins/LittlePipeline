@@ -2,7 +2,6 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>LittlePipeline</id>
-        <version>1.0.0</version>
         <authors>Christopher Loggins</authors>
         <owners>Christopher Loggins</owners>
         <licenseUrl>https://github.com/caloggins/LittlePipeline/blob/master/License.md</licenseUrl>
