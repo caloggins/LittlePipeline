@@ -13,7 +13,7 @@ image: Visual Studio 2017
 assembly_info:
   patch: true
   file: src\Version.cs
-  assembly_version: "1.0.0.{build}"
+  assembly_version: "{version}"
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
 
@@ -30,7 +30,7 @@ build:
   verbosity: normal
 
 after_build:
-  - nuget pack src\LittlePipeline.nuspec
+  - nuget pack artifacts\LittlePipeline.nuspec
 
 artifacts:
   - path: '**\*.nupkg'
