@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
-    <metadata>
-        <id>LittlePipeline</id>
-        <authors>Christopher Loggins</authors>
-        <owners>Christopher Loggins</owners>
-        <licenseUrl>https://github.com/caloggins/LittlePipeline/blob/master/License.md</licenseUrl>
-        <projectUrl>https://github.com/caloggins/LittlePipeline</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <summary>A tiny library to help build simple pipeline processes.</summary>
-        <description>A tiny library to help build simple pipeline processes.</description>
-        <dependencies>
-            <group targetFramework=".NETFramework4.5.2" />
-            <group targetFramework=".NETFramework4.6.2" />
-        </dependencies>
-    </metadata>
-    <files>
-        <file src="..\src\LittlePipeline\bin\Release\*.*" target="lib\net452" />
-        <file src="..\src\LittlePipeline.Net452\bin\Release\*.*" target="lib\net462" />
-    </files>
+  <metadata>
+    <id>LittlePipeline</id>
+    <version>0.0.0</version>
+    <authors>Christopher Loggins</authors>
+    <owners>Christopher Loggins</owners>
+    <licenseUrl>https://github.com/caloggins/LittlePipeline/blob/master/License.md</licenseUrl>
+    <projectUrl>https://github.com/caloggins/LittlePipeline</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>A tiny library to help build simple pipeline processes.</summary>
+    <description>A tiny library to help build simple pipeline processes.</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2" />
+      <group targetFramework=".NETFramework4.6.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\LittlePipeline\bin\Release\*.*" target="lib\net452" />
+    <file src="..\src\LittlePipeline.Net452\bin\Release\*.*" target="lib\net462" />
+  </files>
 </package>
