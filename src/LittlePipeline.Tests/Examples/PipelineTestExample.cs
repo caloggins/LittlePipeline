@@ -20,6 +20,8 @@ namespace LittlePipeline.Tests.Examples
                 .Then(A.CallTo(() => pipeline.Do<Increment>()).MustHaveHappened())
                 .Then(A.CallTo(() => pipeline.Do<Square>()).MustHaveHappened());
         }
+        
+
 
     }
 
