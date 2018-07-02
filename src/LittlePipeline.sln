@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Tests", "Lit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Net452", "LittlePipeline.Net452\LittlePipeline.Net452.csproj", "{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Net461", "LittlePipeline.Net461\LittlePipeline.Net461.csproj", "{3DC568BA-330F-4DA5-BC7D-17C8393053DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
