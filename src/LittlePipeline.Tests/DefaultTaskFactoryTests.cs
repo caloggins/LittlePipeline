@@ -1,22 +1,21 @@
 ﻿using System;
 using FluentAssertions;
 using LittlePipeline.Tests.Bits;
-using NUnit.Framework;
+using Xunit;
 
 namespace LittlePipeline.Tests
 {
     public class DefaultTaskFactoryTests
     {
-        private DefaultTaskFactory factory;
+        private readonly DefaultTaskFactory factory;
 
-        [SetUp]
-        public void SetUp()
+        public DefaultTaskFactoryTests()
         {
             factory = new DefaultTaskFactory();
             factory.Register<SuperTask>(() => new SuperTask(5));
         }
 
-        [Test]
+        [Fact]
         public void ItReturnsRegisteredTasks()
         {
             var superTask = factory.Create<SuperTask>();
@@ -24,7 +23,7 @@ namespace LittlePipeline.Tests
             superTask.Should().NotBeNull();
         }
 
-        [Test]
+        [Fact]
         public void ItThrowsExceptionsWhenTheTaskIsMissing()
         {
             Action act = () => { factory.Create<Increment>(); };
@@ -33,7 +32,7 @@ namespace LittlePipeline.Tests
                 .WithMessage("No registration for the Increment task was found.");
         }
 
-        [Test]
+        [Fact]
         public void AddingTheSameTaskThrowsAnException()
         {
             Action act = () => { factory.Register<SuperTask>(() => null); };

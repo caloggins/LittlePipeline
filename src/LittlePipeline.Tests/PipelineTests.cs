@@ -1,7 +1,7 @@
 ﻿using System;
 using FluentAssertions;
 using LittlePipeline.Tests.Bits;
-using NUnit.Framework;
+using Xunit;
 
 namespace LittlePipeline.Tests
 {
@@ -11,7 +11,7 @@ namespace LittlePipeline.Tests
      */
     public class PipelineTests
     {
-        [Test]
+        [Fact]
         public void ItPerformsTasks()
         {
             var sut = GetPipeline<FirstTestSubject>();
@@ -23,7 +23,7 @@ namespace LittlePipeline.Tests
             subject.Value.Should().Be(1);
         }
 
-        [Test]
+        [Fact]
         public void ItThrowsExceptionsWhenThereIsNoSubject()
         {
             var sut = GetPipeline<FirstTestSubject>();
@@ -33,7 +33,7 @@ namespace LittlePipeline.Tests
                 .WithMessage("No subject has been set, cannot perform any tasks.");
         }
 
-        [Test]
+        [Fact]
         public void ItAcceptsDifferentSubjects()
         {
             var sut = GetPipeline<SecondTestSubject>();
@@ -45,7 +45,7 @@ namespace LittlePipeline.Tests
             subject.Value.Should().Be(1);
         }
 
-        [Test]
+        [Fact]
         public void ItPerformsMultipleTasks()
         {
             var sut = GetPipeline<FirstTestSubject>();
@@ -59,7 +59,7 @@ namespace LittlePipeline.Tests
             subject.Value.Should().Be(4);
         }
 
-        [Test]
+        [Fact]
         public void ItCanUseAFactoryForTasks()
         {
             var sut = GetPipeline<FirstTestSubject>();
