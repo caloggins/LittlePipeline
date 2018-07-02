@@ -29,7 +29,7 @@ namespace LittlePipeline.Tests
         {
             Action act = () => { factory.Create<Increment>(); };
 
-            act.ShouldThrow<MissingRegistrationException>()
+            act.Should().Throw<MissingRegistrationException>()
                 .WithMessage("No registration for the Increment task was found.");
         }
 
@@ -38,7 +38,7 @@ namespace LittlePipeline.Tests
         {
             Action act = () => { factory.Register<SuperTask>(() => null); };
 
-            act.ShouldThrow<TaskAlreadyRegisteredException>()
+            act.Should().Throw<TaskAlreadyRegisteredException>()
                 .WithMessage("The task SuperTask has already been registered.");
         }
 

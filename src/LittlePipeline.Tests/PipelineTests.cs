@@ -29,7 +29,7 @@ namespace LittlePipeline.Tests
             var sut = GetPipeline<FirstTestSubject>();
             Action act = () => sut.Do<Increment>();
 
-            act.ShouldThrow<InvalidOperationException>()
+            act.Should().Throw<InvalidOperationException>()
                 .WithMessage("No subject has been set, cannot perform any tasks.");
         }
 
