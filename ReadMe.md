@@ -46,6 +46,16 @@ pipeline.Subject(subject);
 pipeline.Do<Increment>();
 ```
 
+### What about async methods?
+
+LittlePipeline supports async methods. Simply use the `DoAsync<T>()` method, instead of the normal method:
+
+```csharp
+var subject = new FirstTestSubject();
+pipeline.Subject(subject);
+await pipeline.DoAsync<Increment>();
+```
+
 ### How do I use it with my IoC container?
 
 Using the pipeline with an IoC container is pretty easy. Just register the task factory, tasks, and pipeline with your container. Here's an example using [Ninject](http://www.ninject.org/):
