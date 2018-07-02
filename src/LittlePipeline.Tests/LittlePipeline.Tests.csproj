@@ -81,6 +81,7 @@
     <Compile Include="..\Version.cs">
       <Link>Properties\Version.cs</Link>
     </Compile>
+    <Compile Include="Bits\IncrementAsync.cs" />
     <Compile Include="Bits\SuperTask.cs" />
     <Compile Include="DefaultTaskFactoryTests.cs" />
     <Compile Include="Examples\NinjectExample.cs" />
