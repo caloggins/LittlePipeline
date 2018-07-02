@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LittlePipeline")]
-[assembly: AssemblyCopyright("Copyright ©  2017, Christopher Loggins")]
+[assembly: AssemblyCopyright("Copyright ©  2018, Christopher Loggins")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,19 +1,19 @@
 ﻿using FluentAssertions;
 using LittlePipeline.Tests.Bits;
-using NUnit.Framework;
+using Xunit;
 
 namespace LittlePipeline.Tests
 {
     public class PipelineFactoryTests
     {
-        [Test]
+        [Fact]
         public void ItCreatesPipelines()
         {
             MakePipeline.ForSubject<FirstTestSubject>().Build()
                 .Should().NotBeNull();
         }
 
-        [Test]
+        [Fact]
         public void ItCanAddTasks()
         {
             var pipeline = MakePipeline.ForSubject<FirstTestSubject>()

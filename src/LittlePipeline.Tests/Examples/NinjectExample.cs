@@ -2,13 +2,13 @@
 using LittlePipeline.Tests.Bits;
 using Ninject;
 using Ninject.Extensions.Factory;
-using NUnit.Framework;
+using Xunit;
 
 namespace LittlePipeline.Tests.Examples
 {
     public class NinjectExample
     {
-        [Test]
+        [Fact]
         public void ItCanUseOtherContainers()
         {
             var kernel = new StandardKernel();

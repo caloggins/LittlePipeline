@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		..\appveyor.yml = ..\appveyor.yml
 		..\artifacts\LittlePipeline.nuspec = ..\artifacts\LittlePipeline.nuspec
+		..\ReadMe.md = ..\ReadMe.md
 		Version.cs = Version.cs
 	EndProjectSection
 EndProject
@@ -16,6 +17,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Tests", "LittlePipeline.Tests\LittlePipeline.Tests.csproj", "{0BFD2A6C-F009-4190-AC9D-EEE0A54508D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Net452", "LittlePipeline.Net452\LittlePipeline.Net452.csproj", "{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Net461", "LittlePipeline.Net461\LittlePipeline.Net461.csproj", "{3DC568BA-330F-4DA5-BC7D-17C8393053DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Net452.Tests", "LittlePipeline.Net452.Tests\LittlePipeline.Net452.Tests.csproj", "{EFA5CA78-A804-4103-A844-A9E3FE6DAA66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +40,19 @@ Global
 		{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FD4ACCE-BB9D-467E-9A6F-0696CBD7BC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC568BA-330F-4DA5-BC7D-17C8393053DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA5CA78-A804-4103-A844-A9E3FE6DAA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA5CA78-A804-4103-A844-A9E3FE6DAA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA5CA78-A804-4103-A844-A9E3FE6DAA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA5CA78-A804-4103-A844-A9E3FE6DAA66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A17372D-1675-4FD0-919D-1304B10929E2}
 	EndGlobalSection
 EndGlobal

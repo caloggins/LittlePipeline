@@ -12,14 +12,25 @@ namespace LittlePipeline
         public TTask Create<TTask>()
             where TTask : ITask
         {
+            return Factory<TTask>();
+        }
+
+        [DebuggerStepThrough]
+        public TTask CreateAsync<TTask>() where TTask : IAsyncTask
+        {
+            return Factory<TTask>();
+        }
+
+        private TTask Factory<TTask>()
+        {
             Func<object> creator;
 
             creators.TryGetValue(typeof(TTask), out creator);
 
-            if(creator == null)
+            if (creator == null)
                 throw new MissingRegistrationException($"No registration for the {typeof(TTask).Name} task was found.");
 
-            return (TTask) creator();
+            return (TTask)creator();
         }
 
         [DebuggerStepThrough]

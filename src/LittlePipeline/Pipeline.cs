@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace LittlePipeline
 {
@@ -28,6 +29,16 @@ namespace LittlePipeline
 
             var task = factory.Create<TTask>();
             task.Run(subject);
+        }
+
+        [DebuggerStepThrough]
+        public async Task DoAsync<TTask>()
+            where TTask: IAsyncTask<TSubject>
+        {
+            CheckForSubject();
+
+            var task = factory.CreateAsync<TTask>();
+            await task.Run(subject);
         }
 
         private void CheckForSubject()
