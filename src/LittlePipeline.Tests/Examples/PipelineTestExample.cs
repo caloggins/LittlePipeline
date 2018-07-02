@@ -1,12 +1,12 @@
 ﻿using FakeItEasy;
 using LittlePipeline.Tests.Bits;
-using NUnit.Framework;
+using Xunit;
 
 namespace LittlePipeline.Tests.Examples
 {
     public class PipelineTestExample
     {
-        [Test]
+        [Fact]
         public void ThePipelineCanBeTested()
         {
             var pipeline = A.Fake<IPipeline<FirstTestSubject>>();
@@ -20,9 +20,6 @@ namespace LittlePipeline.Tests.Examples
                 .Then(A.CallTo(() => pipeline.Do<Increment>()).MustHaveHappened())
                 .Then(A.CallTo(() => pipeline.Do<Square>()).MustHaveHappened());
         }
-        
-
-
     }
 
     public class ThingThatUsesThePipeline
@@ -41,5 +38,4 @@ namespace LittlePipeline.Tests.Examples
             pipeline.Do<Square>();
         }
     }
-    
 }
