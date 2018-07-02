@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Linq;
 using FluentAssertions;
 using LittlePipeline.Tests.Bits;
 using Xunit;
 
-namespace LittlePipeline.Tests
+namespace LittlePipeline.Net452.Tests
 {
     public class DefaultTaskFactoryTests
     {
@@ -43,15 +41,5 @@ namespace LittlePipeline.Tests
                 .WithMessage("The task SuperTask has already been registered.");
         }
 
-        [Fact]
-        public void TheMethodsShouldHaveDebuggerStepthrough()
-        {
-            factory.GetType()
-                .Methods()
-                .ThatArePublicOrInternal
-                .ThatAreNotDecoratedWith<DebuggerStepThroughAttribute>()
-                .Count()
-                .Should().Be(0);
-        }
     }
 }

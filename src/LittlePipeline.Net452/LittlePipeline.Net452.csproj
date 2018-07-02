@@ -43,6 +43,9 @@
     <Compile Include="..\LittlePipeline\Builder.cs">
       <Link>Builder.cs</Link>
     </Compile>
+    <Compile Include="..\LittlePipeline\IAsyncTask.cs">
+      <Link>IAsyncTask.cs</Link>
+    </Compile>
     <Compile Include="..\LittlePipeline\IPipeline.cs">
       <Link>IPipeline.cs</Link>
     </Compile>
