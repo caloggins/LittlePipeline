@@ -1,4 +1,6 @@
-﻿namespace LittlePipeline
+﻿using System.Threading.Tasks;
+
+namespace LittlePipeline
 {
     public interface IPipeline<TSubject>
         where TSubject : class
@@ -7,5 +9,8 @@
 
         void Do<TTask>()
             where TTask : ITask<TSubject>;
+
+        Task DoAsync<TTask>()
+            where TTask : IAsyncTask<TSubject>;
     }
 }
