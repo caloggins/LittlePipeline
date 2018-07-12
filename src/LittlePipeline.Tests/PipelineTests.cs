@@ -96,7 +96,7 @@ namespace LittlePipeline.Tests
                 .WithMessage("No subject has been set, cannot perform any tasks.");
         }
 
-        private static Pipeline<TSubject> GetPipeline<TSubject>()
+        private static IPipeline<TSubject> GetPipeline<TSubject>()
                 where TSubject : class
         {
             var factory = new DefaultTaskFactory();
