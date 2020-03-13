@@ -7,6 +7,8 @@
 
 A pipeline, process, or whatever is a sequence of actions that need to be performed to complete an operation. LittlePipeline is a small example of how to create a pipeline that can be tested, and used with any common IoC container. This is a very basic example. It is not designed to handle concurrent tasks. The idea is to use it to express a sequence of steps that must happen to complete a process.
 
+Note: As of v2, LittlePipeline is based on .NET Standard.
+
 ### Getting started.
 
 You will need a subject. This is the class upon which the process is being performed. Subjects must be a `class`.
@@ -136,10 +138,13 @@ No known issues.
 
 ## Version History
 
-__v1.0.0__
-- Initial release, supporting .NET 4.5.2, and 4.6.2.
+__v2.0.0__
+- Upgraded to use .NET Standard
 
 __v1.1.0__
 - Support for async tasks.
 - Support for .NET 4.6.1.
 - Various dependencies updated.
+
+__v1.0.0__
+- Initial release, supporting .NET 4.5.2, and 4.6.2.
