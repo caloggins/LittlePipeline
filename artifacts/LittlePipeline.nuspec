@@ -10,15 +10,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>A tiny library to help build simple pipeline processes.</summary>
     <description>A tiny library to help build simple pipeline processes.</description>
-    <dependencies>
-      <group targetFramework=".NETFramework4.5.2" />
-      <group targetFramework=".NETFramework4.6.2" />
-      <group targetFramework=".NETFramework4.6.1" />
-    </dependencies>
   </metadata>
   <files>
-    <file src="..\src\LittlePipeline\bin\Release\*.*" target="lib\net462" />
-    <file src="..\src\LittlePipeline.Net452\bin\Release\*.*" target="lib\net452" />
-    <file src="..\src\LittlePipeline.Net461\bin\Release\*.*" target="lib\net461" />
+    <file src="..\src\LittlePipeline.Std20\bin\Release\netstandard2.0\*.*" target="lib\netstandard20" />
+    <file src="..\src\LittlePipeline.Std21\bin\Release\netstandard2.1\*.*" target="lib\netstandard21" />
   </files>
 </package>
