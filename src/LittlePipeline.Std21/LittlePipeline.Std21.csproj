@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>LittlePipeline</AssemblyName>
+    <RootNamespace>LittlePipeline</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\LittlePipeline.Std20\Builder.cs" Link="Builder.cs" />
+    <Compile Include="..\LittlePipeline.Std20\DefaultTaskFactory.cs" Link="DefaultTaskFactory.cs" />
+    <Compile Include="..\LittlePipeline.Std20\IAsyncTask.cs" Link="IAsyncTask.cs" />
+    <Compile Include="..\LittlePipeline.Std20\IPipeline.cs" Link="IPipeline.cs" />
+    <Compile Include="..\LittlePipeline.Std20\ITask.cs" Link="ITask.cs" />
+    <Compile Include="..\LittlePipeline.Std20\ITaskFactory.cs" Link="ITaskFactory.cs" />
+    <Compile Include="..\LittlePipeline.Std20\MakePipeline.cs" Link="MakePipeline.cs" />
+    <Compile Include="..\LittlePipeline.Std20\MissingRegistrationException.cs" Link="MissingRegistrationException.cs" />
+    <Compile Include="..\LittlePipeline.Std20\Pipeline.cs" Link="Pipeline.cs" />
+    <Compile Include="..\LittlePipeline.Std20\TaskAlreadyRegisteredException.cs" Link="TaskAlreadyRegisteredException.cs" />
+  </ItemGroup>
+
+</Project>
