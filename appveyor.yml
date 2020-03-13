@@ -22,7 +22,7 @@ platform: Any CPU
 configuration: Release
 
 before_build:
-  nuget restore
+  nuget restore src\LittlePipeline.sln
 
 build:
   project: src\LittlePipeline.sln
