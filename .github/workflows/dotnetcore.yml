@@ -8,6 +8,9 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        dotnet: ['2.2.103', '3.0.100', '3.1.101']
 
     runs-on: windows-latest
 
@@ -16,7 +19,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: ${{ matrix.dotnet }}
     - name: Restore packages
       run: dotnet restore
       working-directory: ./src
