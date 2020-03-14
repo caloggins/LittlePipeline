@@ -12,13 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Version.cs = Version.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Std20", "LittlePipeline.Std20\LittlePipeline.Std20.csproj", "{975163FE-6D24-4FE2-9242-9F03DDF78095}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittlePipeline.Std20", "LittlePipeline.Std20\LittlePipeline.Std20.csproj", "{975163FE-6D24-4FE2-9242-9F03DDF78095}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Std20.Tests", "LittlePipeline.Std20.Tests\LittlePipeline.Std20.Tests.csproj", "{CE886845-11FE-4017-9336-50BE7FFC6706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittlePipeline.Std21", "LittlePipeline.Std21\LittlePipeline.Std21.csproj", "{F5DC9688-84E9-4957-B22C-D80EDD462539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Std21", "LittlePipeline.Std21\LittlePipeline.Std21.csproj", "{F5DC9688-84E9-4957-B22C-D80EDD462539}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittlePipeline.Std21.Tests", "LittlePipeline.Std21.Tests\LittlePipeline.Std21.Tests.csproj", "{54E56B85-E65D-4324-ADF9-317AF1AC1BBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittlePipeline.Std21.Tests", "LittlePipeline.Std21.Tests\LittlePipeline.Std21.Tests.csproj", "{54E56B85-E65D-4324-ADF9-317AF1AC1BBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +28,6 @@ Global
 		{975163FE-6D24-4FE2-9242-9F03DDF78095}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975163FE-6D24-4FE2-9242-9F03DDF78095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{975163FE-6D24-4FE2-9242-9F03DDF78095}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE886845-11FE-4017-9336-50BE7FFC6706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE886845-11FE-4017-9336-50BE7FFC6706}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE886845-11FE-4017-9336-50BE7FFC6706}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE886845-11FE-4017-9336-50BE7FFC6706}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5DC9688-84E9-4957-B22C-D80EDD462539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5DC9688-84E9-4957-B22C-D80EDD462539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5DC9688-84E9-4957-B22C-D80EDD462539}.Release|Any CPU.ActiveCfg = Release|Any CPU
