@@ -27,11 +27,10 @@ before_build:
 
 build:
   project: src\LittlePipeline.sln
-  publish_nuget: true
   verbosity: normal
 
 after_build:
-  #- nuget pack artifacts\LittlePipeline.nuspec -Version %APPVEYOR_BUILD_VERSION%
+  - nuget pack artifacts\LittlePipeline.nuspec -Version %APPVEYOR_BUILD_VERSION%
 
 artifacts:
   - path: '*.nupkg'
