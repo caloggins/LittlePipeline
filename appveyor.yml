@@ -12,7 +12,7 @@ image: Visual Studio 2019
 
 dotnet_csproj:
   patch: true
-  file: '.\src\**\*.csproj'
+  file: '**\*.csproj'
   version: '{version}'
   assembly_version: '{version}'
   file_version: '{version}'
