@@ -23,7 +23,7 @@ platform: Any CPU
 configuration: Release
 
 before_build:
-  dotnet restore .\src\
+  dotnet restore ./src/LittlePipeline.sln
 
 build:
   project: src\LittlePipeline.sln
