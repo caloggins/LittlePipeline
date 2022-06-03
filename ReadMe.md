@@ -138,6 +138,10 @@ No known issues.
 
 ## Version History
 
+__v3.0.0__
+- Created a .NET 6 project
+- Removed the Ninject example.
+
 __v2.0.0__
 - Upgraded to use .NET Standard
 

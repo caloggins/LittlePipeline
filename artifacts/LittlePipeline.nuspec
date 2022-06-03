@@ -14,5 +14,6 @@
   <files>
     <file src="..\src\LittlePipeline.Std20\bin\Release\netstandard2.0\*.*" target="lib\netstandard20" />
     <file src="..\src\LittlePipeline.Std21\bin\Release\netstandard2.1\*.*" target="lib\netstandard21" />
+    <file src="..\src\LittlePipeline.Net6\bin\Release\net6.0\*.*" target="lib\net60" />
   </files>
 </package>
