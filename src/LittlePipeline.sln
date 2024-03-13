@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\artifacts\LittlePipeline.nuspec = ..\artifacts\LittlePipeline.nuspec
 		..\ReadMe.md = ..\ReadMe.md
 		Version.cs = Version.cs
+		..\.github\workflows\build-test.yaml = ..\.github\workflows\build-test.yaml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittlePipeline.Std20", "LittlePipeline.Std20\LittlePipeline.Std20.csproj", "{975163FE-6D24-4FE2-9242-9F03DDF78095}"
