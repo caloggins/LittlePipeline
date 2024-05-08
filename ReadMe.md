@@ -1,7 +1,7 @@
 # LittlePipeline
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/caloggins/littlepipeline?svg=true)](https://ci.appveyor.com/project/caloggins/littlepipeline/branch/master)
-[![NuGet](http://img.shields.io/nuget/v/LittlePipeline.svg)](https://www.nuget.org/packages/LittlePipeline/)
+[![Build Status](https://github.com/cloggins/LittlePipeline/actions/workflows/build-test.yaml/badge.svg)](https://github.com/caloggins/LittlePipeline/actions/workflows/build-test.yaml)
+[![NuGet](https://github.com/cloggins/LittlePipeline/actions/workflows/publish-package.yaml/badge.svg)](https://www.nuget.org/packages/LittlePipeline/)
 
 ### What is it?
 
