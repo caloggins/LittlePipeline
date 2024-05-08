@@ -28,5 +28,5 @@ jobs:
     #- name: Pack
       #run: dotnet pack $SOLUTION -c $BUILD_CONFIG --no-build --output .
     - name: Push
-      run: echo {{ github.ref }}
+      run: echo '${{ github.ref }}'
       #run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
