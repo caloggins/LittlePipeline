@@ -1,8 +1,8 @@
 name: Release to NuGet
 
 on:
-  release:
-    types: [published]
+  push:
+    tags: ['v\d+.\d+.\d+']
     
 jobs:
   build:
@@ -10,14 +10,17 @@ jobs:
     timeout-minutes: 5
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.x.x
     - name: Build
       run: dotnet build -c Release
     - name: Test
       run: dotnet test -c Release --no-build
-    - name: Pack nugets
+    - name: Pack
       run: dotnet pack -c Release --no-build --output .
-    - name: Push to NuGet
-      run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
+    - name: Push
+      run: echo {{ github.ref }}
+      #run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
