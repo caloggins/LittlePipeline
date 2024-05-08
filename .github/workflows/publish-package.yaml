@@ -6,8 +6,14 @@ on:
     
 jobs:
   build:
+    env:
+      BUILD_CONFIG: 'Release'
+      SOLUTION: 'src/LittlePipeline.sln'
+    
     runs-on: ubuntu-latest
+    
     timeout-minutes: 5
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -16,11 +22,11 @@ jobs:
       with:
         dotnet-version: 8.x.x
     - name: Build
-      run: dotnet build -c Release
+      run: dotnet build $SOLUTION -c $BUILD_CONFIG
     - name: Test
-      run: dotnet test -c Release --no-build
+      run: dotnet test $SOLUTION -c $BUILD_CONFIG --no-build
     - name: Pack
-      run: dotnet pack -c Release --no-build --output .
+      run: dotnet pack $SOLUTION -c $BUILD_CONFIG --no-build --output .
     - name: Push
       run: echo {{ github.ref }}
       #run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
