@@ -2,7 +2,6 @@
 {
     public interface ITask
     {
-        
     }
 
     public interface ITask<in TSubject> : ITask

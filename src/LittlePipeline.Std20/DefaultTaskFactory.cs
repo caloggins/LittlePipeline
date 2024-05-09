@@ -6,7 +6,7 @@ namespace LittlePipeline
 {
     public class DefaultTaskFactory : ITaskFactory
     {
-        private readonly ConcurrentDictionary<Type, Func<object>> creators = new ConcurrentDictionary<Type, Func<object>>();
+        private readonly ConcurrentDictionary<Type, Func<object>> creators = new();
 
         [DebuggerStepThrough]
         public TTask Create<TTask>()

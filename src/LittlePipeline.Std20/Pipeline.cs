@@ -4,17 +4,11 @@ using System.Threading.Tasks;
 
 namespace LittlePipeline
 {
-    public class Pipeline<TSubject> : IPipeline<TSubject>
+    public class Pipeline<TSubject>(ITaskFactory factory) : IPipeline<TSubject>
         where TSubject : class
     {
-        private readonly ITaskFactory factory;
-        private TSubject subject;
-
-        public Pipeline(ITaskFactory factory)
-        {
-            this.factory = factory;
-        }
-
+        private TSubject subject = null!;
+        
         [DebuggerStepThrough]
         public void Subject(TSubject newSubject)
         {

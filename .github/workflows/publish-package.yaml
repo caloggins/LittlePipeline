@@ -2,13 +2,14 @@ name: Release to NuGet
 
 on:
   push:
-    tags: ['v\d+.\d+.\d+']
+    tags: ['\d+.\d+.\d+']
     
 jobs:
   build:
     env:
       BUILD_CONFIG: 'Release'
       SOLUTION: 'src/LittlePipeline.sln'
+      PROJECT: 'src/LittlePipeline.Std20/LittlePipeline.Std20.csproj'
     
     runs-on: ubuntu-latest
     
@@ -22,11 +23,10 @@ jobs:
       with:
         dotnet-version: 8.x.x
     - name: Build
-      run: dotnet build $SOLUTION -c $BUILD_CONFIG
+      run: dotnet build $SOLUTION -c $BUILD_CONFIG /p:Version=${{ github.ref }}
     - name: Test
       run: dotnet test $SOLUTION -c $BUILD_CONFIG --no-build
-    #- name: Pack
-      #run: dotnet pack $SOLUTION -c $BUILD_CONFIG --no-build --output .
+    - name: Pack
+      run: dotnet pack $PROJECT -c $BUILD_CONFIG -o . /p:Version=${{ github.ref }} --no-build
     - name: Push
-      run: echo '${{ github.ref_name }}'
       #run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json

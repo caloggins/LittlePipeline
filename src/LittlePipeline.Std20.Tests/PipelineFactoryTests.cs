@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
-using LittlePipeline.Std21.Tests.Bits;
+using LittlePipeline.Std20.Tests.Bits;
 using Xunit;
 
-namespace LittlePipeline.Std21.Tests
+namespace LittlePipeline.Std20.Tests
 {
     public class PipelineFactoryTests
     {

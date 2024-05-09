@@ -5,6 +5,16 @@
     <RootNamespace>LittlePipeline</RootNamespace>
     <AssemblyName>LittlePipeline</AssemblyName>
     <Version>2.0.0</Version>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <Title>Little Pipeline</Title>
+    <Authors>Christopher Loggins</Authors>
+    <Description>A tiny library to help build simple pipeline processes.</Description>
+    <Copyright>2024, all rights reserved.</Copyright>
+    <PackageProjectUrl>https://github.com/caloggins/LittlePipeline</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/caloggins/LittlePipeline/blob/master/License.md</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/caloggins/LittlePipeline</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>

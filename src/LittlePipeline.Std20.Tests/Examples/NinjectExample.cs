@@ -1,10 +1,10 @@
 ﻿using FluentAssertions;
-using LittlePipeline.Std21.Tests.Bits;
+using LittlePipeline.Std20.Tests.Bits;
 using Ninject;
 using Ninject.Extensions.Factory;
 using Xunit;
 
-namespace LittlePipeline.Std21.Tests.Examples
+namespace LittlePipeline.Std20.Tests.Examples
 {
     public class NinjectExample
     {

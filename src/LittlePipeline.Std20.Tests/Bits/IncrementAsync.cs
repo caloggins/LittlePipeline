@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LittlePipeline.Std21.Tests.Bits
+namespace LittlePipeline.Std20.Tests.Bits
 {
     public class IncrementAsync : IAsyncTask<FirstTestSubject>
     {

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using FluentAssertions;
-using LittlePipeline.Std21.Tests.Bits;
+using LittlePipeline.Std20.Tests.Bits;
 using Xunit;
 
-namespace LittlePipeline.Std21.Tests
+namespace LittlePipeline.Std20.Tests
 {
     public class DefaultTaskFactoryTests
     {
@@ -28,7 +27,7 @@ namespace LittlePipeline.Std21.Tests
         [Fact]
         public void ItThrowsExceptionsWhenTheTaskIsMissing()
         {
-            Action act = () => { factory.Create<Increment>(); };
+            var act = () => { factory.Create<Increment>(); };
 
             act.Should().Throw<MissingRegistrationException>()
                 .WithMessage("No registration for the Increment task was found.");
@@ -37,14 +36,14 @@ namespace LittlePipeline.Std21.Tests
         [Fact]
         public void AddingTheSameTaskThrowsAnException()
         {
-            Action act = () => { factory.Register<SuperTask>(() => null); };
+            var act = () => { factory.Register<SuperTask>(() => null!); };
 
             act.Should().Throw<TaskAlreadyRegisteredException>()
                 .WithMessage("The task SuperTask has already been registered.");
         }
 
         [Fact]
-        public void TheMethodsShouldHaveDebuggerStepthrough()
+        public void TheMethodsShouldHaveDebuggerStepThrough()
         {
             factory.GetType()
                 .Methods()

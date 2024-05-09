@@ -1,8 +1,8 @@
 ﻿using FakeItEasy;
-using LittlePipeline.Std21.Tests.Bits;
+using LittlePipeline.Std20.Tests.Bits;
 using Xunit;
 
-namespace LittlePipeline.Std21.Tests.Examples
+namespace LittlePipeline.Std20.Tests.Examples
 {
     public class PipelineTestExample
     {

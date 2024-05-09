@@ -4,7 +4,7 @@ namespace LittlePipeline
 {
     public class Builder<TSubject> where TSubject : class
     {
-        private readonly DefaultTaskFactory factory = new DefaultTaskFactory();
+        private readonly DefaultTaskFactory factory = new();
 
         public Builder<TSubject> With<TTask>(Func<object> creator)
         {
