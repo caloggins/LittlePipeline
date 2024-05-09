@@ -23,10 +23,10 @@ jobs:
       with:
         dotnet-version: 8.x.x
     - name: Build
-      run: dotnet build $SOLUTION -c $BUILD_CONFIG /p:Version=${{ github.ref }}
+      run: dotnet build $SOLUTION -c $BUILD_CONFIG /p:Version=${{ github.ref_name }}
     - name: Test
       run: dotnet test $SOLUTION -c $BUILD_CONFIG --no-build
     - name: Pack
-      run: dotnet pack $PROJECT -c $BUILD_CONFIG -o . /p:Version=${{ github.ref }} --no-build
+      run: dotnet pack $PROJECT -c $BUILD_CONFIG -o . /p:Version=${{ github.ref_name }} --no-build
     #- name: Push
       #run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
