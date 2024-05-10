@@ -3,11 +3,13 @@
 [![Build Status](https://github.com/caloggins/LittlePipeline/actions/workflows/build-test.yaml/badge.svg)](https://github.com/caloggins/LittlePipeline/actions/workflows/build-test.yaml)
 [![NuGet](https://github.com/caloggins/LittlePipeline/actions/workflows/publish-package.yaml/badge.svg)](https://www.nuget.org/packages/LittlePipeline/)
 
-### What is it?
+## What is it?
 
 A pipeline, process, or whatever is a sequence of actions that need to be performed to complete an operation. LittlePipeline is a small example of how to create a pipeline that can be tested, and used with any common IoC container. This is a very basic example. It is not designed to handle concurrent tasks. The idea is to use it to express a sequence of steps that must happen to complete a process.
 
-### Getting started.
+**Note: v3 is something of a breaking change. The library now only targets .NET Std 2.0.**
+
+## Getting started.
 
 You will need a subject. This is the class upon which the process is being performed. Subjects must be a `class`.
 
@@ -17,7 +19,6 @@ public class Counter
     public int Value { get; set; }
 }
 ```
-
 You will need one or more tasks. Tasks must implement the `ITask<TSubject>` interface.
 
 ```csharp
@@ -29,7 +30,6 @@ public class Increment : ITask<Counter>
     }
 }
 ```
-
 Once your subject, and tasks are defined, it's time to setup the task factory. LittlePipeline comes with a very basic task factory which can be used if you're not using an IoC container in your application. Each task must be registered in the task factory.
 
 ```csharp
@@ -45,9 +45,7 @@ var subject = new FirstTestSubject();
 pipeline.Subject(subject);
 pipeline.Do<Increment>();
 ```
-
-### What about async methods?
-
+## What about async methods?
 LittlePipeline supports async methods. To use async operations, the tasks must be defined as asynchronous:
 
 ```csharp
@@ -68,8 +66,8 @@ pipeline.Subject(subject);
 await pipeline.DoAsync<Incrementer>();
 ```
 
-### How do I use it with my IoC container?
-
+## How do I use it with my IoC container?
+### Ninject
 Using the pipeline with an IoC container is pretty easy. Just register the task factory, tasks, and pipeline with your container. Here's an example using [Ninject](http://www.ninject.org/):
 
 ```csharp
@@ -91,8 +89,40 @@ var subject = new FirstTestSubject();
 pipeline.Subject(subject);
 pipeline.Do<Increment>();
 ```
+### Autofac
+```csharp
+var builder = new ContainerBuilder();
 
-### How do I test the pipeline?
+builder.RegisterType<TaskFactory>().As<ITaskFactory>().SingleInstance();
+
+builder.RegisterType<Increment>().AsSelf();
+builder.RegisterType<Square>().AsSelf();
+
+builder.RegisterGeneric(typeof(Pipeline<>)).As(typeof(IPipeline<>)).AsImplementedInterfaces();
+
+var container = builder.Build();
+
+var pipeline = container.Resolve<IPipeline<FirstTestSubject>>();
+
+var subject = new FirstTestSubject();
+pipeline.Subject(subject);
+pipeline.Do<Increment>();
+pipeline.Do<Increment>();
+pipeline.Do<Square>();
+```
+A very simple factory class...
+```csharp
+public class TaskFactory(IComponentContext container) : ITaskFactory
+{
+    public TTask Create<TTask>() where TTask : ITask =>
+        container.Resolve<TTask>();
+
+    public TTask CreateAsync<TTask>() where TTask : IAsyncTask =>
+        container.Resolve<TTask>();
+}
+```
+
+## How do I test the pipeline?
 
 Testing the pipeline's use is as easy as testing that calls were made in the correct order. First, the class that's using a pipeline:
 
@@ -138,7 +168,6 @@ No known issues.
 
 __v3.0.0__
 - Solely targets .NET Std 2.0.
-- Removed the Ninject example.
 
 __v2.0.0__
 - Upgraded to use .NET Standard
