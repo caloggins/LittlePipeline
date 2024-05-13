@@ -1,7 +1,8 @@
 # LittlePipeline
 
 [![Build Status](https://github.com/caloggins/LittlePipeline/actions/workflows/build-test.yaml/badge.svg)](https://github.com/caloggins/LittlePipeline/actions/workflows/build-test.yaml)
-[![NuGet](https://github.com/caloggins/LittlePipeline/actions/workflows/publish-package.yaml/badge.svg)](https://www.nuget.org/packages/LittlePipeline/)
+[![NuGet](https://img.shields.io/nuget/v/LittlePipeline)](https://www.nuget.org/packages/LittlePipeline/)
+![Downloads](https://img.shields.io/nuget/dt/LittlePipeline)
 
 ## What is it?
 
