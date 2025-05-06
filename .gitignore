@@ -88,9 +88,6 @@ fabric.properties
 !package/blank.txt
 package/
 
-# Include phantomjs.exe
-!src/YearEndDashboard.Client/Tests/phantomjs.exe
-
 # User-specific files
 *.suo
 *.user
@@ -290,7 +287,6 @@ FakesAssemblies/
 *.opt
 /PoolCareSource/*.user
 /PoolCareSource/*.suo
-src/YearEndDashboard.Client/jsconfig.json
-/src/YearEndDashboard.Client/YearEndDashboard/nbproject/private/
 /.idea
-/src/YearEndDashboard.Client/.idea
+
+src/.idea/.idea.LittlePipeline/.idea/AndroidProjectSystem.xml
